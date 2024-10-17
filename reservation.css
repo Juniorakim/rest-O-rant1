@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* or 'Lora', serif */
+    background-color: #777271ab;
+}
+
+main {
+    padding: 20px; /* Add padding to the main section */
+}
+
+/* Navbar Styling */
+.navbar {
+    border-bottom: 1px solid #e2e2c1; /* Light border color */
+}
+
+.navbar ul {
+    margin: 0;
+    background-color: #E85C0D; /* Soft Coral */
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white; /* Change text color for better contrast */
+    font-weight: bold; /* Make text bolder */
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.navbar a:hover {
+    color: #eb973e; /* Soft tan for hover */
+}
+
+/* Form Styling */
+.reservation-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: 20px 0; /* Add margin to separate from navbar and footer */
+    
+}
+
+form {
+    background-color: #E85C0D;
+    padding: 90px;
+    border-radius: 30px;
+}
+
+/* Title Styling */
+form h1 {
+    color: white;
+    margin-bottom: 30px; /* Increased margin for better spacing */
+    font-size: 2.5rem;
+}
+
+/* Input & Label Alignment */
+form .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Increased bottom margin */
+}
+
+form label {
+    width: 150px;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 320px; /* Slightly increased input width */
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    margin-left: 20px; /* Increased spacing between label and input */
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+/* Calendar Styling */
+input[type="date"] {
+    padding: 10px 40px 10px 15px; /* Extra padding for icon */
+    background-color: #fff;
+    color: #333;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type="date"]::before {
+    content: '\1F4C5'; /* Unicode for calendar icon */
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 20px;
+    color: #81431f; /* Icon color matches theme */
+    pointer-events: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+
+/* Button Styling */
+button {
+    width: 220px; /* Slightly larger button */
+    height: 55px;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    color: #E85C0D;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 30px; /* Added space above the button */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f7b798;
+}
+
+/* Footer Styling */
+footer {
+    display: flex;
+    flex-direction: column;
+    height: 20vh; /* Adjust as needed */
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d0c78e; /* Matches the theme */
+    gap: 20px; /* Space between elements */
+    margin-top: 20px; /* Space above footer */
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Space between links */
+    justify-content: center; /* Center links */
+    padding: 0;
+}
+
+footer a {
+    color: black; /* Link color */
+    text-decoration: none; /* No underline */
+}
+
+footer a:hover {
+    color: #e5533d; /* Color change on hover */
+}

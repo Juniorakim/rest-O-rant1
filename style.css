@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; /* or 'Lora', serif */
+}
+
+.navbar {
+  border-bottom: 1px solid #e2e2c1; /* Light border color */
+}
+
+.navbar ul {
+  margin: 0;
+  background-color: #E85C0D; /* Soft Coral */
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white; /* Change text color for better contrast */
+  font-weight: bold; /* Make text bolder */
+  transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.navbar a:hover {
+  color: #eb973e; /* Soft tan for hover */
+}
+
+/* Hamburger Menu Toggle Styles */
+.navbar-toggle {
+  display: none; /* Hide the hamburger by default */
+  flex-direction: column; /* Align bars vertically */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.bar {
+  width: 30px; /* Width of the hamburger bars */
+  height: 3px; /* Height of the hamburger bars */
+  background-color: white; /* Color of the bars */
+  margin: 4px 0; /* Space between bars */
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+.title-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack the h1 and p vertically */
+  height: 100vh;
+  background-image: url("./Images/Background.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+  margin: 0;
+}
+
+.title-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjusted opacity for readability */
+  z-index: 1; /* Overlay is at 1 */
+}
+
+.title-page h1 {
+  margin: 0;
+  font-size: 5rem; /* Keep the title size as specified */
+  z-index: 2; /* Ensure text stays above the overlay */
+}
+
+.title-page p {
+  font-size: 1.2rem; /* Keep the paragraph size as specified */
+  margin: 10px 0 0 0; /* Minimal spacing between h1 and p */
+  z-index: 2; /* Ensure text stays above the overlay */
+  text-align: center;
+  padding: 0 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for contrast */
+}
+
+.reservation-button {
+  margin-top: 20px; /* Space between the paragraph and button */
+  padding: 10px 20px; /* Size of the button */
+  font-size: 1rem; /* Keep button text size as specified */
+  color: rgb(255, 255, 255); /* Text color */
+  background-color: #ff6347; /* Matching the theme color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth color transition */
+  position: relative; /* Ensure it's positioned correctly */
+  z-index: 3; /* Button is at 3, above the overlay */
+}
+
+.reservation-button:hover {
+  background-color: #e5533d; /* Slightly darker color on hover */
+}
+
+.menu {
+  height: auto; /* Adjust height to fit content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Increased gap for better spacing */
+  background-color: #E85C0D; /* Keep the background color */
+  padding: 40px; /* Added padding for inner spacing */
+}
+
+.menu-list {
+  align-items: center;
+  justify-content: center; /* Center items in a row */
+  display: flex;
+  flex-direction: row; /* Ensure items are in a row */
+  padding: 80px;
+}
+
+.menu-list ul {
+  list-style: none;
+  background-color: rgba(211, 208, 199, 0.8); /* Slightly transparent for depth */
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px; /* Slightly rounded corners */
+  font-size: 1.5rem; /* Keep the font size larger for readability */
+  margin: 20px; /* Smaller margin for compactness */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.2s; /* Smooth hover effect */
+  margin: 40px;
+}
+
+.menu-list ul:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.category-title {
+  font-size: 2rem; /* Increased size for visibility */
+  font-weight: bold;
+  color: rgb(231, 223, 211);
+  margin-bottom: 10px; /* Space between title and items */
+}
+
+.menu > p {
+  font-size: 2.5rem; /* Adjusted size for emphasis */
+  font-weight: 300;
+  margin: 20px 0; /* Space above and below */
+}
+
+.cta {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid black;
+  padding: 20px; /* Added padding for spacing */
+  background-color: rgba(231, 92, 13, 0.8); /* Slightly darker background for contrast */
+}
+
+.cta h2 {
+  font-size: 48px; /* Increased size for emphasis */
+  color: white; /* Ensure good contrast */
+}
+
+.cta p {
+  font-size: 20px; /* Slightly larger for better visibility */
+  color: white; /* Ensure text color stands out */
+  text-align: center;
+  margin-bottom: 20px; /* Space below the paragraph */
+}
+
+.cta .reservation-button {
+  padding: 15px 30px; /* Larger button size */
+  font-size: 1.2rem; /* Larger text on the button */
+  background-color: #ff6347; /* Maintain matching theme color */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.cta .reservation-button:hover {
+  background-color: #e5533d; /* Darker on hover */
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  height: 20vh; /* Adjust as needed */
+  justify-content: center;
+  align-items: center;
+  background-color: #d3d0c78e; /* Matches the theme */
+  gap: 20px; /* Space between elements */
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  gap: 20px; /* Space between links */
+  justify-content: center; /* Center links */
+  padding: 0;
+}
+
+footer a {
+  color: black; /* Link color */
+  text-decoration: none; /* No underline */
+}
+
+footer a:hover {
+  color: #e5533d; /* Color change on hover */
+}
+
+/* Media Query for Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar ul {
+      display: none; /* Hide menu by default */
+      flex-direction: column; /* Stack items vertically */
+      position: absolute; /* Positioning adjustments */
+      top: 60px; /* Adjust according to your navbar height */
+      left: 0;
+      width: 100%; /* Full width */
+      background-color: #E85C0D; /* Same as your navbar */
+  }
+
+  .navbar ul.show {
+      display: flex; /* Show menu when toggled */
+  }
+
+  .navbar-toggle {
+      display: flex; /* Show the hamburger icon */
+      flex-direction: column; /* Align bars vertically */
+      cursor: pointer; /* Change cursor to pointer */
+  }
+
+  .bar {
+      width: 30px; /* Width of the hamburger bars */
+      height: 3px; /* Height of the hamburger bars */
+      background-color: white; /* Color of the bars */
+      margin: 4px 0; /* Space between bars */
+  }
+
+  .navbar a {
+      font-size: 0.9rem; /* Smaller text size for mobile */
+  }
+
+  .reservation-button {
+      padding: 8px 16px; /* Smaller button size for mobile */
+      font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .menu-list {
+      flex-direction: column; /* Stack items for mobile */
+      padding: 20px; /* Adjust padding for mobile */
+  }
+
+  .menu-list ul {
+      margin: 20px; /* Adjust margins */
+  }
+
+  .cta h2 {
+      font-size: 36px; /* Smaller h2 for mobile */
+  }
+
+  .cta p {
+      font-size: 18px; /* Smaller paragraph size for mobile */
+  }
+
+  footer {
+      flex-direction: column; /* Stack footer items vertically */
+  }
+}

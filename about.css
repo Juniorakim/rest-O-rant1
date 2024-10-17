@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    border-bottom: 1px solid #e2e2c1; /* Light border color */
+}
+
+.navbar ul {
+    margin: 0;
+    background-color: #E85C0D; /* Soft Coral */
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white; /* Change text color for better contrast */
+    font-weight: bold; /* Make text bolder */
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.navbar a:hover {
+    color: #eb973e; /* Soft tan for hover */
+}
+
+/* About Section Styling */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    background-image: url('./Images/about-background.jpg'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Make text more readable */
+}
+
+.about-content {
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background for text readability */
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.about-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-content ul li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.about-content ul li::before {
+    content: "✓"; /* Checkmark bullet */
+    color: #E85C0D;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.about-image {
+    margin-left: 40px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Footer Styling */
+footer {
+    display: flex;
+    flex-direction: column;
+    height: 20vh; /* Adjust as needed */
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d0c78e; /* Matches the theme */
+    gap: 20px; /* Space between elements */
+    margin-top: 20px; /* Space above footer */
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Space between links */
+    justify-content: center; /* Center links */
+    padding: 0;
+}
+
+footer a {
+    color: black; /* Link color */
+    text-decoration: none; /* No underline */
+}
+
+footer a:hover {
+    color: #e5533d; /* Color change on hover */
+}

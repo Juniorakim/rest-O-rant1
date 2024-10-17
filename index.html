@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./Images/cutlery.png" type="image/x-icon">
+    <title>Rest-O-rant</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-toggle" aria-label="Toggle navigation">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="./reservations.html">Reservation</a></li>    
+            <li><a href="./contacts.html">Contact</a></li>
+            <li><a href="./about.html">About Us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="title-page">
+            <h1>Rest-O-rant</h1>
+            <p>
+                Welcome to our restaurant, where flavors meet passion and every meal tells a story!<br>
+                Our talented chefs use only the freshest ingredients, crafting dishes that not only satisfy your hunger but also tantalize your taste buds.<br>
+                Whether you’re here for a casual dinner with friends or a special celebration, we strive to provide an unforgettable dining experience.<br>
+                Join us and discover the warmth of our hospitality and the joy of delicious food!
+            </p>
+            <button class="reservation-button" type="button">Make a Reservation</button>
+        </div>
+        <div class="menu">
+            <p>Our Menu</p>
+            <div class="menu-list">
+                <ul>
+                    <h3 class="category-title">Drinks</h3>
+                    <li>Coffee</li>
+                    <li>Hot Chocolate</li>
+                    <li>Pepsi</li>
+                    <li>Coca-Cola</li>
+                    <li>Fanta</li>
+                </ul>
+                
+                <ul>
+                    <h3 class="category-title">Food</h3>
+                    <li>Steak</li>
+                    <li>Grilled Chicken</li>
+                    <li>Pasta Primavera</li>
+                    <li>Caesar Salad</li>
+                    <li>Vegetable Stir-Fry</li>
+                </ul>
+                
+                <ul>
+                    <h3 class="category-title">Specials</h3> 
+                    <li>Seafood Paella</li>
+                    <li>Mushroom Risotto</li>
+                    <li>Lamb Chops with Mint Sauce</li>
+                    <li>Chocolate Lava Cake</li>
+                    <li>Seasonal Fruit Tart</li>
+                </ul>
+            </div>
+        </div>
+        <div class="cta">
+            <h2>Make Your Reservation</h2>
+            <p>Reserve your spot now</p>
+            <button class="reservation-button" type="button">Make a Reservation</button>
+        </div>
+    </main>
+    <footer>
+        <div class="social-media"></div>
+        <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+        </ul>
+        ©Junior Akim 2024
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navbarToggle = document.querySelector('.navbar-toggle');
+            const navbarMenu = document.querySelector('.navbar ul');
+        
+            navbarToggle.addEventListener('click', function() {
+                navbarMenu.classList.toggle('show'); // Toggle the show class on the menu
+            });
+        });
+    </script>
+</body>
+</html>
