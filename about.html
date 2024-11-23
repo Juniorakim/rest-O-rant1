@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link rel="stylesheet" href="about.css">
-    <link rel="icon" href="./Images/cutlery.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./Images/cutlery.png" type="image/x-icon">
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./reservations.html">Reservations</a></li>
-            <li><a href="./contacts.html">Contacts</a></li>
-            <li><a href="#">About Us</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="navbar">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./reservations.html">Reservations</a></li>
+                <li><a href="./contacts.html">Contacts</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section class="about-section">
@@ -33,17 +40,15 @@
                 </ul>
             </div>
             <div class="about-image">
-                <img src="./Images/Background.jpg" alt="Restaurant Photo">
+                <img src="./Images/Background.jpg" alt="Our Restaurant">
             </div>
         </section>
 
-        <!-- New Video and Audio Section -->
         <section class="media-section">
             <h2>Our Journey</h2>
             <p>Watch the story of how we started and the adventures we have had along the way.</p>
-            <video controls class="media-video" autoplay unmuted muted>
-                <source src="./Images/Cinematic Coffee B Roll Sony A7S III 16 35mm F4.mp4">
-                <source src="./Images/Cinematic Coffee B Roll Sony A7S III 16 35mm F4 (1).mp4">
+            <video controls class="media-video">
+                <source src="./Images/Cinematic Coffee B Roll Sony A7S III 16 35mm F4.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
 
@@ -51,7 +56,6 @@
             <p>Listen to the sounds that inspire our creativity in the kitchen.</p>
             <audio controls class="media-audio">
                 <source src="./Images/preview.mp3" type="audio/mpeg">
-                <source src="media/our-story.ogg" type="audio/ogg">
                 Your browser does not support the audio tag.
             </audio>
         </section>
@@ -62,7 +66,18 @@
             <li><a href="#">Instagram</a></li>
             <li><a href="#">Facebook</a></li>
         </ul>
-        ©Junior Akim 2024
+        <p>©Junior Akim 2024</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
