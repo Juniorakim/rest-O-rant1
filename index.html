@@ -31,7 +31,8 @@
                 Whether you’re here for a casual dinner with friends or a special celebration, we strive to provide an unforgettable dining experience.<br>
                 Join us and discover the warmth of our hospitality and the joy of delicious food!
             </p>
-            <button class="reservation-button" type="button">Make a Reservation</button>
+            <button class="reservation-button" type="button" onclick="window.location.href='reservations.html'">Make a Reservation</button>
+
         </div>
         <div class="menu">
             <p>Our Menu</p>
@@ -44,7 +45,6 @@
                     <li>Coca-Cola</li>
                     <li>Fanta</li>
                 </ul>
-                
                 <ul>
                     <h3 class="category-title">Food</h3>
                     <li>Steak</li>
@@ -53,7 +53,6 @@
                     <li>Caesar Salad</li>
                     <li>Vegetable Stir-Fry</li>
                 </ul>
-                
                 <ul>
                     <h3 class="category-title">Specials</h3> 
                     <li>Seafood Paella</li>
@@ -67,7 +66,8 @@
         <div class="cta">
             <h2>Make Your Reservation</h2>
             <p>Reserve your spot now</p>
-            <button class="reservation-button" type="button">Make a Reservation</button>
+            <button class="reservation-button" type="button" onclick="window.location.href='reservations.html'">Make a Reservation</button>
+            
         </div>
     </main>
     <footer>
@@ -79,13 +79,11 @@
         ©Junior Akim 2024
     </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const navbarToggle = document.querySelector('.navbar-toggle');
-            const navbarMenu = document.querySelector('.navbar ul');
-        
-            navbarToggle.addEventListener('click', function() {
-                navbarMenu.classList.toggle('show'); // Toggle the show class on the menu
-            });
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar ul');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
         });
     </script>
 </body>
