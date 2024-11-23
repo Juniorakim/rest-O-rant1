@@ -1,71 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta and Title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservation</title>
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="reservation.css">
-    <link rel="icon" href="./Images/cutlery.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="./Images/cutlery.png" type="image/x-icon">
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar">
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#">Reservations</a></li>
-            <li><a href="./contacts.html">Contacts</a></li>
-            <li><a href="./about.html">About Us</a></li>
-        </ul>
-    </nav>
-    <main>
-        <div class="reservation-form">
-            <form action="">
-                <h1 class="form-title">Reserve a Table</h1>
-                <div class="form-group">
-                    <label>Name</label> 
-                    <input type="text">
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="text">
-                </div>
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="text">
-                </div>
-                <div class="form-group">
-                    <label>Number of Guests</label>
-                    <input type="text">
-                </div>
-                <div class="form-group">
-                    <label>Reservation</label>
-                    <input type="date">
-                </div>
-                <div class="form-group">
-                    <label>Reservation Type</label>
-                    <select name="reservation-type">
-                        <option value="Please Choose">Please Choose</option>
-                        <option value="">VIP</option>
-                        <option value="">Wedding</option>
-                        <option value="">Personal Meeting</option>
-                        <option value="">Corporate</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>If Others Please, Specify</label>
-                    <input type="text">
-                </div>
-                <button>Submit</button>
-            </form>
+        <div class="hamburger-container">
+            <div class="hamburger" onclick="toggleMenu()" tabindex="0" role="button" aria-label="Toggle navigation">
+                &#9776;
+            </div>
         </div>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">Reservations</a></li>
+                <li><a href="./contacts.html">Contacts</a></li>
+                <li><a href="./about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Reservation Section -->
+        <section class="reservation-section">
+            <h1 class="section-title">Reserve a Table</h1>
+            <div class="reservation-form">
+                <form action="">
+                    <!-- Form fields -->
+                    <div class="form-group">
+                        <label for="name">Name<span>*</span></label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email<span>*</span></label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number<span>*</span></label>
+                        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests<span>*</span></label>
+                        <input type="number" id="guests" placeholder="Enter number of guests" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Reservation Date<span>*</span></label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Reservation Time<span>*</span></label>
+                        <input type="time" id="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reservation-type">Reservation Type<span>*</span></label>
+                        <select id="reservation-type" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="VIP">VIP</option>
+                            <option value="Wedding">Wedding</option>
+                            <option value="Meeting">Personal Meeting</option>
+                            <option value="Corporate">Corporate</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="other-type-group" style="display: none;">
+                        <label for="other-type">If Other, Please Specify</label>
+                        <input type="text" id="other-type" placeholder="Specify your reservation type">
+                    </div>
+                    <button type="submit">Submit Reservation</button>
+                </form>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
     <footer>
-        <div class="social-media"></div>
         <ul>
             <li><a href="#">Instagram</a></li>
             <li><a href="#">Facebook</a></li>
         </ul>
-        ©Junior Akim 2024
+        <p>© Junior Akim 2024</p>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+        function toggleMenu() {
+            const navContainer = document.querySelector(".nav-container");
+            navContainer.classList.toggle("show");
+        }
+
+        // Accessibility: Allow toggling the menu with keyboard
+        document.querySelector('.hamburger').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                toggleMenu();
+            }
+        });
+
+        // Show the "Other" input field when "Other" is selected
+        document.getElementById('reservation-type').addEventListener('change', function() {
+            const otherTypeGroup = document.getElementById('other-type-group');
+            if (this.value === 'Other') {
+                otherTypeGroup.style.display = 'block';
+            } else {
+                otherTypeGroup.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
